@@ -40,3 +40,7 @@ ul {
 .list-item img {
   margin-right: 10px;
 }
+
+span {
+  font-weight: 600;
+}

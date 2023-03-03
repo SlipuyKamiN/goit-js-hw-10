@@ -36,14 +36,14 @@ const resetMarkup = () => {
 const handleInputChange = event => {
   resetMarkup();
 
-  const inputValue = event.target.value;
+  const inputValue = event.target.value.trim();
 
-  if (inputValue.trim() === '') {
+  if (inputValue === '') {
     resetMarkup();
     return;
   }
 
-  fetchCountries(inputValue.trim())
+  fetchCountries(inputValue)
     .then(countries => {
       if (countries.length > 10) {
         showInfoNotification();
